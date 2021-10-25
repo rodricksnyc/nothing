@@ -1,0 +1,178 @@
+
+
+#main-wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+#theform {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+
+
+.indentLabel {
+  margin-left: 2.3em;
+  padding-top: 1em;
+}
+
+.labelLine {
+  background: #DAEDF2;
+  height: 2px;
+  width: 100px;
+  margin-left: 1.9em;
+  margin-top: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+input[type="radio"].styled:checked + label:after {
+  font-family: 'FontAwesome';
+  content: "\f111";
+}
+
+
+input[type=checkbox],
+input[type=radio] {
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+input[type=checkbox][disabled],
+input[type=radio][disabled] {
+  cursor: not-allowed;
+}
+
+input[type=checkbox][disabled] + label,
+input[type=radio][disabled] + label {
+  cursor: not-allowed;
+}
+
+input[type=checkbox][disabled] + label:before,
+input[type=radio][disabled] + label:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+input[type=checkbox]:focus + label:before,
+input[type=radio]:focus + label:before {
+  box-shadow: 0 0 8px #082c78;
+  border: 3px solid blue !important;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  input[type=checkbox]:focus + label:before,
+  input[type=radio]:focus + label:before {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8) !important;
+    border: 2px solid blue !important;
+  }
+}
+
+
+input[type=checkbox]:checked + label:after,
+input[type=radio]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+.no-borderradius input[type=checkbox], .no-borderradius
+input[type=radio] {
+  background: transparent;
+  position: relative;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+input[type=checkbox] + label,
+input[type=radio] + label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 28px;
+}
+
+.no-borderradius input[type=checkbox] + label, .no-borderradius
+input[type=radio] + label {
+  padding: 0;
+}
+
+input[type=checkbox] + label:before,
+input[type=radio] + label:before {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  content: '';
+  background: white;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 3px;
+  border: 2px solid #008289;
+  margin-top: 3px;
+  border-radius: 50%;
+}
+
+.no-borderradius input[type=checkbox] + label:before, .no-borderradius
+input[type=radio] + label:before {
+  display: none;
+}
+
+input[type=checkbox] + label:after,
+input[type=radio] + label:after {
+  content: '\2713';
+  position: absolute;
+  font-weight: 100;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  /* color: #00467f; */
+  background-color: #008289;
+  border: 1px solid #008289;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.no-borderradius input[type=checkbox] + label:after, .no-borderradius
+input[type=radio] + label:after {
+  display: none;
+}
+
+
+#consentForm {
+  padding-left: 4.8em;
+  padding-right: 4em;
+  text-align: left;
+}
+
+
+@media (max-width:767px) {
+
+  .indentLabel {
+    margin-left: 1.8em;
+    padding-top: 1em;
+  }
+}
