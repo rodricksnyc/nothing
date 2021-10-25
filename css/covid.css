@@ -176,13 +176,13 @@ h1.title {
   padding-left: 0;
 }
 
-.redBox.first {
+/* .redBox.first {
   border-right: 1px solid white;
 }
 
 .redBox.second {
   border-right: 1px solid white;
-}
+} */
 
 
 .skipNav {
@@ -466,10 +466,11 @@ p.modalFooter {
 }
 
 .fortyEight {
-  font-size: 48px;
-  color: black;
+  font-size: 40px;
+  color: white;
   font-weight: 600;
-  font-family: 'Raleway', sans-serif;
+
+  font-family: 'Sulphur Point', sans-serif;
 }
 
 span.teal {
@@ -640,10 +641,11 @@ img.covid {
 }
 
 p.small {
-  font-size: 30px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  color:#231F20;
+
+  font-size: 16px;
+font-weight: 300;
+color: #262626;
+font-family: 'Raleway', sans-serif;
 }
 
 p.small.mobileFont {
@@ -836,38 +838,12 @@ p.white.larger {
   margin-left: 0;
 }
 
-/* a:focus {
-outline: none;
 
-outline-offset: 0px;
-}
-
-.panel-title a:focus {
-box-shadow: 0px 0px 5px 5px rgba(0,0,255,1);
-}
-
-.papaya a:focus {
-box-shadow: 0px 0px 5px 5px rgba(0,0,255,1);
-}
-
-.button-default:focus {
-box-shadow: 0px 0px 5px 5px rgba(0,0,255,1);
-}
-
-.button-info:focus {
-box-shadow: 0px 0px 5px 5px rgba(0,0,255,1) !important;
-} */
 
 .dial:hover {
   color:#AD0000;
   text-decoration: underline !important;
 }
-
-/* .button-default:hover {
-background: #231F20;
-}
-*/
-
 
 .demo {
   text-align: center;
@@ -948,6 +924,8 @@ span.blue.card {
   padding-left: 1em;
   padding-right: 1em;
   max-height: 78rem;
+  border-bottom: 3px solid #007C91;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15);
 }
 
 .hero-img-container.secondOne {
@@ -1242,7 +1220,7 @@ p.smallest {
 
 
 .button-default {
-  margin: 0rem auto 1rem;
+  margin: 2rem auto 1rem;
   display: block;
 padding: .7em 1.45em;
   background-color:transparent;
@@ -1283,6 +1261,18 @@ padding: .7em 1.45em;
 .landing-panel label {
   font-family: 'Raleway', sans-serif;
 }
+#stickyBottom{
+  position: absolute;
+  left: calc(50% - 200px);
+    bottom: 100px;
+    width: 400px;
+}
+
+#themaincontent{
+  background: #615440;
+  border-bottom: 3px solid #007C91;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15);
+}
 
 .redBox {
   background:#611C35;
@@ -1293,44 +1283,34 @@ padding: .7em 1.45em;
   -webkit-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  height: 120px;
-  position: absolute;
-  z-index: 9999;
-  width: 100%;
-  left: 0;
-  top: -116px;
-  width: 7em;
-    left: 0;
-    top: -116px;
-    height: 7em;
+
+  width: 90px;
+
+
+    height: 90px;
     border-radius: 100%;
+    -webkit-transition: transform .5s ease-in-out;
+  -moz-transition: transform .55s ease-in-out;
+  -ms-transition: transform .5s ease-in-out;
+  margin:0em 2em;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15);
 }
 
 .redBox .whiteStrong {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight:300;
-  font-size:16px;
-
+  font-size:18px;
+  padding-top:10px
 }
 
 
 .redBox:hover, .redBox:active, .redBox:focus, .redBox:visited {
-  background: #231F20;
-  /* background: rgb(131,131,131);
-  background: linear-gradient(180deg, rgba(131,131,131,0.9122023809523809) 0%, rgba(64,64,64,1) 100%); */
-  height: auto;
-  padding: 1.8em;
-  color: white;
-  -webkit-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  height: 120px;
-  position: absolute;
-  z-index: 9999;
-  width: 100%;
-  left: 0;
-  top: -116px;
+  -webkit-transition: transform .5s ease-in-out;
+-moz-transition: transform .55s ease-in-out;
+-ms-transition: transform .5s ease-in-out;
+ transform: scale(1.05);
+ background:#411328
 }
 
 .redBox:visited {
@@ -1347,6 +1327,12 @@ padding: .7em 1.45em;
   width: 100%;
   left: 0;
   top: -116px;
+}
+
+.block6{
+  background:#BEA57D;
+  width:100%;
+  padding-top:50px
 }
 
 .landing-panel .checkbox label {
@@ -1910,11 +1896,13 @@ span.blue {
     position: absolute;
 }
 .about.last{
-  max-height:35px
+  max-height:35px;
+  margin-top:1em
 }
 
 .p1 {
   padding: 1em 0em 1em 0em;
+  padding: 45px 0 15px 0;
 }
 
 .p2 {
