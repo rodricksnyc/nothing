@@ -1,53 +1,84 @@
 $(document).ready(function () {
 
+  //508 tabbing
 
-  $('.radio-inline input').change(function (e) {
-    setReasonActive();
-  })
-  $('.radio-inline input').keypress(function (e) {
-    setReasonActive();
-  })
-
-  function setReasonActive() {
-    $('.radio-inline input').each(function () {
-      if ($(this).prop('checked')) {
-        $(this).closest('.vertical').find('.fas').css('color', '#9A1220')
-        $(this).closest('.vertical').find('label').css('color', '#9A1220')
-        $(this).parents('.vertical').css('background' ,'#e5f2f3');
-
-      } else {
-        $(this).parents('.vertical').css( 'background' ,'transparent')
-        $(this).closest('.vertical').find('.fas').css('color', '#231F20')
-        $(this).closest('.vertical').find('label').css('color', '#231F20')
-      }
-    })
-  }
-
-  setReasonActive()
-
-
-  $('#close').on('click', function () {
-    setTimeout(function () {
-      $('.block50').removeClass('active')
-    }, 800)
-
-    $('#slideOut').removeClass('showSlideOut')
-
-  })
-
-
-  $("input, textarea, button").on("keyup", function (e) {
-
+  $("a, button, input, [tabIndex='0'], #one, .closeRadio, .card-link, select, span").on("keyup", function (e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 9) {
       $(this).css('outline', 'dashed 3px #4599ff')
-
     }
 
   })
-  $("input, textarea, button").on('focusout', function() {
+  $("a, button, input, [tabIndex='0'], #one, .closeRadio, .card-link, select, span").on('focusout', function() {
     $(this).css('outline', 'none')
   })
+
+
+  //rotate caret
+
+$('.collapse').on('show.bs.collapse', function () {
+
+  $('a[href="#' + this.id + '"] .caret-down').css({
+    transform: "rotate(180deg)"
+  });
+
+});
+$('.collapse').on('hide.bs.collapse', function () {
+
+  $('a[href="#' + this.id + '"] .caret-down').css({
+    transform: "rotate(0deg)"
+  });
+
+});
+
+
+
+var hash = 1;
+
+$(".ques").each(function(i){
+  var count = "ques" + (++hash)
+
+  $(this).attr("href",  "#" + count);
+
+
+  $(this).closest('.card').find('.collapse').attr("id", count);
+});
+
+
+function expand(toggleValue) {
+
+  return function(e){
+
+    $(this).html() == "Collapse All" ? $(this).html('Expand All') : $(this).html('Collapse All');
+    $(`.expandAll${toggleValue} .collapse`).collapse('toggle');
+
+    if ( $(this).html() == 'Collapse All') {
+      $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-up  changeIcon${toggleValue}"></i>`)
+    }
+
+    if ( $(this).html() == 'Expand All') {
+      $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-down changeIcon${toggleValue}"></i>`);
+    }
+
+
+    // if ($(this).html() == 'Collapse All' && $(this).is('.white')) {
+    //
+    //   $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-up changeIcon${toggleValue}"></i>`)
+    // }
+    //
+    //
+    // if ($(this).html() == 'Expand All' && $(this).is('.white')){
+    //   $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-down  changeIcon${toggleValue}"></i>`);
+    // }
+
+
+
+  }
+}
+
+
+$('#toggleAccordion1').keypress(expand(1)).click(expand(1));
+
   //scrolling
 
   $('a[href^="#top"]').on('click', function (event) {
@@ -299,36 +330,6 @@ $(document).ready(function () {
     $('#veryBottom').focus();
   })
 
-
-
-
-
-
-  $("#submitButton").on("click", function () {
-    $('#submitButton').css('background-image', 'linear-gradient(180deg, rgba(0,70,127,1) 0%, rgba(0,70,127,1) 34%, rgba(0,70,127,1) 77%)');
-
-  })
-
-  $("#submitButton").on("focus", function () {
-    $('#submitButton').css('background-image', 'linear-gradient(180deg, rgba(0,70,127,1) 0%, rgba(0,70,127,1) 34%, rgba(0,70,127,1) 77%)');
-
-  })
-
-
-
-
-  $('.dial').on('focus', function () {
-    $('#slideOut').addClass('showSlideOut');
-  })
-
-
-  $('.panel-collapse').on('show.bs.collapse', function () {
-    $(this).siblings('.panel-heading').addClass('active');
-  });
-
-  $('.panel-collapse').on('hide.bs.collapse', function () {
-    $(this).siblings('.panel-heading').removeClass('active');
-  });
 
 
 
@@ -1335,60 +1336,6 @@ $(document).ready(function () {
 
     });
 
-    //password for input button
-
-    function show() {
-      var p = document.getElementById('accessCode1');
-      p.setAttribute('type', 'text');
-    }
-
-    function hide() {
-      var p = document.getElementById('accessCode1');
-      p.setAttribute('type', 'password');
-    }
-
-    var pwShown = 0;
-
-    document.getElementById("togglePassword").addEventListener("click", function () {
-
-
-
-      if (pwShown == 0) {
-        pwShown = 1;
-        show();
-
-        $("#eye").attr('src', "img/close-eye.svg");
-        $('.mr-1').css('margin-top', '2px');
-
-        $('#access').html('Hide Access Code')
-
-      } else {
-        pwShown = 0;
-        hide();
-
-        $("#eye").attr('src', "img/show_pw_icon.svg");
-
-        $('.mr-1').css('margin-top', '-2px');
-
-        $('#access').html('Show Access Code')
-      }
-    }, false);
-
-
-
-    document.getElementById("eye").addEventListener("keyup", function (e) {
-
-      // $('#eye').css('box-shadow', '0px 0px 5px 5px rgba(0,0,255,1)');
-
-      var code = (e.keyCode ? e.keyCode : e.which);
-      if (code == 9) {
-        $(this).css('outline', 'dashed 3px #4599ff')
-      }
-
-    })
-    $('#eye').on('focusout', function() {
-      $(this).css('outline', 'none')
-    })
 
 
     $(".button-default").on("keyup", function (e) {
@@ -1432,131 +1379,12 @@ $(document).ready(function () {
     })
 
 
-    // $('#bottomLastAnchor').on('focusout', function() {
-    //   $('#veryVeryBottom').focus()
-    // })
-    //
-    // $("#veryVeryBottom").on("focus", function (e) {
-    //   //
-    //   // var code = (e.keyCode ? e.keyCode : e.which);
-    //   // if (code == 9) {
-    //     $(this).closest('.circle.blue').css('box-shadow', '0px 0px 5px 5px rgba(0,0,255,1)')
-    //   //
-    //   // }
-    // })
-    // $("#stickySide a").on('focusout', function() {
-    //   $(this).css('outline', 'none')
-    // })
-
-
-    document.getElementById("eye").addEventListener("keyup", function (e) {
-
-      // $('#eye').css('box-shadow', '0px 0px 5px 5px rgba(0,0,255,1)');
-
-      var code = (e.keyCode ? e.keyCode : e.which);
-      if (code == 13) {
-        if (pwShown == 0) {
-          pwShown = 1;
-          show();
-
-          $("#eye").attr('src', "img/close-eye.svg");
-          $('.mr-1').css('margin-top', '2px');
-
-          $('#access').html('Hide Access Code')
-
-        }
-        else {
-          pwShown = 0;
-          hide();
-
-          $("#eye").attr('src', "img/show_pw_icon.svg");
-
-          $('.mr-1').css('margin-top', '-2px');
-
-          $('#access').html('Show Access Code')
-        }
-
-      }
-
-    }, false);
-
 
 
   }
 
   if ($(document).innerWidth() <= 767) {
 
-    $("#slideOut").css("right", 0);
-
-    $('#slideOut').removeClass('showSlideOut')
-
-    $("#slideOut").css("bottom", -$('#slideOut').height());
-
-    var overlay = document.getElementById('whiteBlock');
-
-    // console.log(window.getComputedStyle(overlay).height);
-
-
-    $(window).on("scroll", function () {
-      var docHeight = $(document).height();
-      var winScrolled = $(window).height() + $(window).scrollTop(); // Sum never quite reaches
-      if ((docHeight - winScrolled) > 10) {
-
-        var setHeight = $("#contact").height() ;
-
-        $("#slideOut").delay(100).animate({
-          bottom: '0',
-          top: setHeight
-
-        }, 500);
-
-      }
-
-
-    });
-
-
-    function show() {
-      var p = document.getElementById('accessCode1');
-      p.setAttribute('type', 'text');
-    }
-
-    function hide() {
-      var p = document.getElementById('accessCode1');
-      p.setAttribute('type', 'password');
-    }
-
-    var pwShown = 0;
-
-    document.getElementById("togglePassword2").addEventListener("click", function () {
-      if (pwShown == 0) {
-        pwShown = 1;
-        show();
-
-
-        $("#closedEye").attr('src', "img/close-eye.svg");
-
-
-
-      } else {
-        pwShown = 0;
-        hide();
-
-        $("#closedEye").attr('src', "img/show_pw_icon.svg");
-
-
-      }
-    }, false);
-
-    //
-    // var sticky = document.getElementById('stickyBottom');
-    //
-    // console.log(window.getComputedStyle(sticky).height);
-
-
-    // $(".westat-footer").css({
-    //   'bottom': ($(sticky).height() + 'px')
-    // });
 
 
     $(window).on('scroll', function () {
