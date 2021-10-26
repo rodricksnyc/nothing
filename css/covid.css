@@ -950,7 +950,7 @@ border-bottom: none;
 }
 .card .caret-down {
     position: absolute;
-    right: 15px;
+    right: 80%;
     transition: transform 0.3s;
     font-size: 22px;
     float: right;
@@ -958,6 +958,9 @@ border-bottom: none;
     color: #611C35;
 }
 
+.card .caret-down i {
+font-weight: 100;
+}
 .card p {
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
