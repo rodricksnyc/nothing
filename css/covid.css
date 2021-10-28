@@ -553,7 +553,8 @@ span.blue.card {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 96%;
+  margin:0% 3%;
   height: 100%;
   padding: none;
   font-size: 20px;
