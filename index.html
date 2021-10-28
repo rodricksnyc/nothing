@@ -41,12 +41,33 @@
                   <img src="img/logo.svg" class="img-responsive" alt="Track COVID at Home logo">
                 </div>
                 <!-- <p class="text-center">Welcome to the<br>COVID Co-Immunity Study</p><br> -->
-                <div class="form-signin my-3 text-center">
-                  <p id="MainContent_Label1" class="form-signin-heading">Thank you for your interest in Track COVID at Home! This health study is being conducted so that researchers can learn about how COVID-19 is passed among people who live together. Westat, a research company based in Rockville, Maryland, is managing the study. The Centers for Disease Control and Prevention (CDC) is sponsoring the study.</p>
-                  <p class="form-signin-heading mb-2 mt-2">For this research, it is important to get information from the person that has a positive COVID-19 test and all of their household members, as soon as possible after being tested. To find out if you are eligible, click on “Get Started.” If you’d like to learn more about this study, click on ”About” or “FAQs.”</p>
+                <div class="position-relative form-signin text-center">
+
+
+          					<div class="position-relative form-signin-input my-3 text-center">
+                      <p id="MainContent_Label1" class="form-signin-heading">Thank you for your interest in Track COVID at Home! This health study is being conducted so that researchers can learn about how COVID-19 is passed among people who live together. Westat, a research company based in Rockville, Maryland, is managing the study. The Centers for Disease Control and Prevention (CDC) is sponsoring the study.</p>
+                      <p class="form-signin-heading mb-2 mt-2">For this research, it is important to get information from the person that has a positive COVID-19 test and all of their household members, as soon as possible after being tested. To find out if you are eligible, click on “Get Started.” If you’d like to learn more about this study, click on ”About” or “FAQs.”</p>
+
+          					</div>
+          		        <div class="position-relative form-login-input">
+            						<label for="MainContent_txtAccessCode" class="berry">Username</label>
+            						<input name="ctl00$MainContent$txtAccessCode1" type="username" maxlength="50" size="8" id="MainContent_txtAccessCode"
+            						class="form-control access">
+            						<label for="MainContent_txtAccessCode2" class="berry">Password</label>
+            						<input name="ctl00$MainContent$txtAccessCode1" type="password" maxlength="50" size="8" id="MainContent_txtAccessCode2"
+            						class="form-control access">
+
+
+            						<a href="#signin" class="form-login-a second">Forgot Password?</a>
+
+          					   </div>
+
+
 
                   <input type="submit" name="" value="Get Started" id="MainContent_btnContinue" class="button-default mb-4">
-                  <a class="berry mt-5">Already a participant? Login</a>
+
+                  <a href="#login" class="form-login-a berry mt-5 text-center" id="blue">Already a participant?&nbsp;Log in</a>
+                  <a href="#signin" class="form-login-a second berry mt-5 text-center">New participant?</a>
                 </div>
               </div>
             </div>
@@ -184,7 +205,7 @@
                   <h3 class="text-left mb-0 ml-4">About the Study</h3>
 
                   <div class="hoverThis d-flex align-items-center">
-                    <i class="far fa-angle-down changeIcon1 berry"></i>&nbsp;<p id="toggleAccordion1" accordion-id="#accordion" class="mb-0 berry" role="button" tabindex="0">expand all</p>
+                    <i class="fal fa-expand-alt changeIcon1 berry"></i>&nbsp;<p id="toggleAccordion1" accordion-id="#accordion" class="mb-0 berry" role="button" tabindex="0">expand all</p>
                   </div>
 
                 </div>
@@ -534,7 +555,7 @@
           </article>
         </div>
         </div>
-        <footer></footer>
+        <!-- <footer></footer> -->
       </div>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

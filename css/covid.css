@@ -538,7 +538,7 @@ span.blue.card {
 
 .landing-panel .form-control {
   display: block;
-  width: 76%;
+  width: 100%;
   height: calc(4rem + 2px);
   padding: 20px 20px;
   font-size: 20px;
@@ -618,6 +618,20 @@ p.smallest {
 .panel-body {
   padding: 15px;
   padding-top: 0px;
+}
+
+.form-login-input {
+
+  display: flex;
+  align-items: left !important;
+  flex-direction: column;
+  text-align:left;
+  margin-top:12em;
+  display: none;
+}
+
+.form-login-a.second {
+    display: none;
 }
 
 
@@ -838,7 +852,7 @@ p.smallest {
 }
 
 .mt50{
-margin-top:8%
+margin-top:7%
 }
 
 .abso1{

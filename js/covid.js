@@ -53,11 +53,11 @@ function expand(toggleValue) {
     $(`.expandAll${toggleValue} .collapse`).collapse('toggle');
 
     if ( $(this).html() == 'Collapse All') {
-      $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-up  changeIcon${toggleValue}"></i>`)
+      $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-compress-arrows-alt berry changeIcon${toggleValue}"></i>`)
     }
 
     if ( $(this).html() == 'Expand All') {
-      $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-down changeIcon${toggleValue}"></i>`);
+      $(`.changeIcon${toggleValue}`).replaceWith(`<i class="fal fa-expand-alt berry changeIcon${toggleValue}"></i>`);
     }
 
 
@@ -329,6 +329,59 @@ $('#toggleAccordion1').keypress(expand(1)).click(expand(1));
   $('#bottom').on('focusout', function () {
     $('#veryBottom').focus();
   })
+
+
+  function toggleBegin(el) {
+	$(el).attr('href') === '#signin' ? (
+		$('.landing-panel-p2').show(),
+		// $('.form-signin-heading').text('To start your survey, please enter the PIN included in your invitation letter.')
+		$('.form-login-input').hide(),
+		$('.form-signin-input').show()
+	) : (
+		$('.landing-panel-p2 second').hide(),
+		// $('.form-signin-heading').text('Log in with your username and password.'),
+		$('.form-signin-input').hide(),
+		$('.form-login-input').show().css('display', 'flex')
+	);
+}
+
+$('.form-login-a').on('click', function (e) {
+	toggleBegin(this);
+})
+
+$('.form-login-a').on('keypress', function (e) {
+	toggleBegin(this);
+})
+
+$('.form-login-a').on('click', function (e) {
+	// $('#access2').html('Show password')
+	$('#MainContent_btnContinue').val('Login');
+	$('#MainContent_Label1').addClass('hidden')
+	$('#blue').html('New participant? Enter PIN')
+
+	$('#blue').hide()
+	$('.landing-panel-p2').hide()
+	$('.form-login-a.second').show().css('display', 'flex')
+	$('.landing-panel-p1.text-center').html('Welcome back to the PATH Study!')
+	$('.position-relative.form-login-input input:eq(0)').focus()
+
+
+})
+
+
+
+$('.form-login-a.second').on('click', function (e) {
+	$('.form-signin input:eq(0)').focus()
+	$('#blue').html('Already a participant? Log in')
+	$('#MainContent_btnContinue').val('Get Started');
+	$('#MainContent_Label1').removeClass('hidden')
+
+	$('#blue').show()
+	$('.landing-panel-p2').show()
+	$('.form-login-a.second').hide()
+	$('.landing-panel-p1.text-center').html('Welcome to the PATH Study!')
+
+})
 
 
 
