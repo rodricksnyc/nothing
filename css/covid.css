@@ -231,6 +231,8 @@ p.modalFooter {
   font-weight: 100;
 
   font-family: 'Sulphur Point', sans-serif;
+  position: relative;
+    z-index: 22;
 }
 
 .fortyEight.blue {
@@ -239,6 +241,8 @@ p.modalFooter {
   font-weight: 100;
 
   font-family: 'Sulphur Point', sans-serif;
+  position: relative;
+    z-index: 22;
 }
 
 
@@ -656,6 +660,10 @@ p.smallest {
   display: none;
 }
 
+.menu-buttons-768{
+  display: none
+}
+
 
 .button-default {
   margin: 2rem auto 1rem;
@@ -993,8 +1001,8 @@ p.smallest {
 
 
 .number{
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   background: #007C91;
 
   border-radius: 100%;
@@ -1011,15 +1019,15 @@ p.smallest {
 .number.right .white{
   color:white;
   position: absolute;
-  left: 29%;
+  left: 35%;
   font-size: 6.4em;
-  top: -11px
+  top: -5px
 }
 
 .number.right{
-  top:-25px;
+  top:-40px;
   left:unset;
-  right:-25px;
+  right:-40px;
 }
 
 .number.right.last .white{
@@ -1597,7 +1605,7 @@ span.blue {
 }
 .about {
   max-height: 51px;
-  opacity: .3;
+  opacity: .2;
   position: absolute;
 }
 
