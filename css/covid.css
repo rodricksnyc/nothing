@@ -4335,6 +4335,10 @@ span.lightTeal {
     margin-top: 0%;
 }
 
+.topBlue{
+  min-height: 0em
+}
+
 
 .bottom-overlay {
   top: 0;
