@@ -528,7 +528,7 @@ span.blue.card {
   border-radius: 0em;
   position: relative;
   /* box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15); */
-  padding: 2em 4em;
+  padding: 2em 10%;
   background-repeat: no-repeat;
   background-position: center 1.5rem;
   transition: 0.4s all;
@@ -664,13 +664,13 @@ p.smallest {
   background-color:transparent;
   color: #611C35;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   cursor: pointer;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   opacity:.95;
-  border: 1px solid #611C35;
+  border: 2px solid #611C35;
   font-family: 'Raleway', sans-serif;
   border-radius:.75rem;
   -webkit-transition: transform .5s ease-in-out;
@@ -903,16 +903,20 @@ p.smallest {
   background-size: cover;
   height:auto;
   min-height:100%;
-  opacity:.3
+  opacity:.1
 }
 
 .hero-img-two.white{
   background-image: url(../img/white.svg);
-  opacity:.75
+  opacity:1
+}
+
+.tiny{
+  font-size:12px;
 }
 
 .block88{
-  background: #ebebeb;
+  background: #EFEEEC;
   padding-bottom: 10em
 }
 
@@ -962,7 +966,7 @@ p.smallest {
   border-top-right-radius: .5rem;
   padding: 1em;
   line-height: 1.4;
-  min-height:6em
+  min-height:6.4em
 }
 .whiteCard img{
   border-bottom-left-radius: .5rem;
@@ -998,16 +1002,18 @@ box-shadow: inset 0px 0px 0px 3px white;
 border: 1px solid #007C91;
 position: absolute;
 top:-25px;
-left:-25px
+left:-25px;
+  font-family: 'Sulphur Point', sans-serif;
+  font-weight: 900;
 }
 
 .number .white,
 .number.right .white{
   color:white;
   position: absolute;
-  left: 27%;
-  font-size: 6em;
-  top: -17px;
+  left: 29%;
+  font-size: 6.4em;
+  top: -11px
 }
 
 .number.right{
@@ -1167,7 +1173,7 @@ a.whiteStrong {
 
 
 .panel p.small {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 400;
   color: #262626;
   font-family: 'Raleway', sans-serif;
@@ -1220,7 +1226,8 @@ a.whiteStrong {
   position: relative;
   /* padding: 6em; */
   padding: 30px;
-  z-index: 1
+  z-index: 1;
+   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -1249,10 +1256,13 @@ a.whiteStrong {
   border-radius: .75rem;
 }
 
+.smaller{
+  font-size: 12px
+}
 
 .card .ques {
   color: #611C35;
-  font-size:16px;
+  font-size:1.8em;
   margin: 0 !important;
   width: 95%;
   font-weight:500;
@@ -1587,9 +1597,12 @@ span.blue {
 }
 .about {
   max-height: 51px;
-  opacity: .55;
+  opacity: .3;
   position: absolute;
 }
+
+
+
 .about.last{
   max-height:35px;
   margin-top:1em
