@@ -3626,7 +3626,8 @@ footer.el-S.secondFooter {
   }
 
   .block6{
-    min-height:110em
+    min-height:100%;
+    padding-bottom: 5em
   }
 
   .block88 {
@@ -3974,10 +3975,14 @@ p.small.inner {
 
 .block5 {
 
-  margin-top: 3rem;
-  padding-bottom: 3rem;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.light {
+    font-weight: 300;
+    text-align: center !important;
+    margin-left: 0rem !important;
 }
 
 .small2.last {
@@ -4331,9 +4336,7 @@ ul.discs {
   max-width: 263px;
 }
 
-.block5 {
-  padding-top: 1em;
-}
+
 
 h1.white {
   color: white;
