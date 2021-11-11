@@ -1030,10 +1030,10 @@ p.smallest {
   right:-40px;
 }
 
-.number.right.last .white{
+/* .number.right.last .white{
   top: -12px;
   left: 26%;
-}
+} */
 
 .trans{
   position: absolute;
@@ -1226,7 +1226,7 @@ a.whiteStrong {
   z-index: 1
 }
 .grayBox {
-  background: #F1F1F1;
+  background: #DFDDD9;
   padding-left: 0em;
   padding-top: 0em;
   max-height: 360px;
@@ -1235,7 +1235,7 @@ a.whiteStrong {
   /* padding: 6em; */
   padding: 30px;
   z-index: 1;
-  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15); */
 }
 
 
@@ -3518,11 +3518,18 @@ footer.el-S.secondFooter {
 
 
   .landing-panel{
-    background: white;
-    opacity:.9;
+    background: transparent;
+
     padding:1em;
     max-width: 100% !important;
     width: 100%;
+  }
+  .hero-img{
+    display: none
+  }
+
+  .hero-img-container{
+    background: white
   }
 
   .landing-panel p{
@@ -3710,9 +3717,13 @@ footer.el-S.secondFooter {
     list-style-type: none;
   }
   .menu-buttons-768-list li:focus{
-    background: #411328;
+    background: #004568;
   }
 
+  .menu-buttons-768-list li:focus img {
+
+  opacity: 1;
+}
 
 
   img.covid {
@@ -4004,7 +4015,7 @@ ul.papaya {
 }
 
 .grayBox {
-  background: #F1F1F1;
+
   padding-left: 0em;
   padding-top: 0em;
   position: relative;
