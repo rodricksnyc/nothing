@@ -1000,9 +1000,7 @@ p.smallest {
 .block88{
   background: #EFEEEC;
   padding-bottom: 10em;
-  box-shadow: 1px 7px 31px 5px rgba(0,0,0,0.41);
-  -webkit-box-shadow: 1px 7px 31px 5px rgba(0,0,0,0.41);
-  -moz-box-shadow: 1px 7px 31px 5px rgba(0,0,0,0.41);
+
 z-index: 9;
 }
 
