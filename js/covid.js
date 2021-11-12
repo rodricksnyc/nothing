@@ -32,6 +32,7 @@ $(document).ready(function () {
   });
 
 
+//acordions
 
   var hash = 1;
 
@@ -59,18 +60,6 @@ $(document).ready(function () {
       if ( $(this).html() == 'Expand All') {
         $(`.changeIcon${toggleValue}`).replaceWith(`<i class="fal fa-expand-alt berry changeIcon${toggleValue}"></i>`);
       }
-
-
-      // if ($(this).html() == 'Collapse All' && $(this).is('.white')) {
-      //
-      //   $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-up changeIcon${toggleValue}"></i>`)
-      // }
-      //
-      //
-      // if ($(this).html() == 'Expand All' && $(this).is('.white')){
-      //   $(`.changeIcon${toggleValue}`).replaceWith(`<i class="far fa-angle-down  changeIcon${toggleValue}"></i>`);
-      // }
-
 
 
     }
@@ -254,14 +243,6 @@ $(document).ready(function () {
       })
     }
   });
-
-
-
-
-
-
-
-
 
 
 });
