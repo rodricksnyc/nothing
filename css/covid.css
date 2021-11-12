@@ -122,7 +122,20 @@ a:hover {
   padding-left: 0;
 }
 
+.copy{
+  margin-top:7em;
 
+}
+
+.whiter{
+  color:white !important;
+  margin:0em 25em !important
+}
+
+.white {
+    color:white !important;
+    text-decoration: underline !important;
+}
 
 .rel {
   position: relative;
