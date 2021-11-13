@@ -189,6 +189,9 @@ footer{
   color: #f2f4f5;
 }
 
+.form-login-a{
+  font-size:13px
+}
 
 
 .secondBlock {
@@ -1231,6 +1234,8 @@ z-index: 9;
 
 }
 
+@media (min-width:768px){
+
 .leftBorder {
   border-bottom-left-radius: 1rem !important
  }
@@ -1248,7 +1253,7 @@ z-index: 9;
    border-top-left-radius: 1rem !important
 }
 
-
+}
 
 a.whiteStrong {
   color:white !important;
@@ -2964,9 +2969,9 @@ footer.el-S.secondFooter {
   }
 }
 
-@media (min-width:1025px){
+@media (min-width:768px){
   .landing-panel .form-control {
-      min-width:800px
+      min-width:600px
   }
 }
 
@@ -3170,7 +3175,10 @@ footer.el-S.secondFooter {
   .whiteCard{
     margin:1em 1em
   }
+.block88{
+  padding: 0em 4em 10em 4em
 
+}
   /* .infos{
     flex-direction: column;
   }
